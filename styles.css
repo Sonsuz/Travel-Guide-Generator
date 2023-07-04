@@ -7,8 +7,8 @@
 
 
 .navbar {
-    background: #131313;
-    height: 80px;
+    background: #9b9b9b33; /*Chnaged*/
+    height: 95px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,18 +20,19 @@
 
 .navbar__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 80px;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+    margin-right: 155px; /*Chnaged this*/
+   
+    padding: 0 0px;
 }
 
 #navbar__logo {
     background-color: ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-image: linear-gradient(to top, #00a2ff 0%, #00a2ff 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -40,18 +41,22 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-right: 95px; /* changes made by Esat to move logo more to the left from the links*/
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 549;
 }
 
 .fa-gem {
-    margin-right: 0.5 rem;
+    margin-right: 0.7 rem;
 }
 
 .navbar__menu {
     display: flex;
-    /* align-items: center; */
+    align-items: center; 
+    /*justify-content: center; */
     list-style: none;
+    margin-right: 100px;
     text-align: center;
 }
 
@@ -60,12 +65,13 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: #000000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-decoration: none;
     padding: 0 1rem;
+    margin-right: 100x;
     height: 100%;
 }
 
@@ -88,8 +94,8 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #f77062;
-    color: #fff
+    background: #ff5353;
+    color: #ffffff
 }
 
 .button:hover {
@@ -98,7 +104,7 @@
 }
 
 .navbar__links:hover {
-    color: #f77062;
+    color: #00a2ff;
     transition: all 0.3s ease;
 }
 /*
