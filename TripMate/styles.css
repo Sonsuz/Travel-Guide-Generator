@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*Navigation Bar*/
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: #131313;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+#logo-image {
+  background-color: #131313;
+  width: 100px;
+  height: 80px;
+}
+#logo-text {
+  margin-left: 10px; 
+  font-size: 2rem; 
+  color: #0caae9; 
+  background-color: #131313;
+  font-family: cursive;
+}
+
+.fa-gem {
+    margin-right: 0.5 rem;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.signin {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-right: 1px;
+    padding: 0 0.5rem;
+    height: 100%;
+}
+.signin:hover {
+  color: #0caae9;
+  transition: all 0.3s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: #0caae9;
+    color: #fff
+}
+.button:hover {
+    background: #ffffff;
+    color: #0caae9; 
+}
+
+.button1 {
+    font-size: 25px;
+    padding: 10px 100px;
+    height: 100%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: #0caae9;
+    color: #fff
+}
+.button1:hover {
+    background: #ffffff;
+    color: #0caae9; 
+}
+
+.navbar__links:hover {
+    color: #0caae9;
+    transition: all 0.3s ease;
+}
+
+/*Home Page*/
+
+.welcome-section {
+    text-align: center;
+    padding: 50px 0;
+    color: #045877;
+    background-color: #f1f1f1;
+  }
+  
+  .feature-section {
+    padding: 50px 0;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .feature-section h2 {
+    color: #0caae9;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .feature-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #045877;
+    margin: 12px auto;
+  }
+
+  .feature-section h3 {
+    color: #0caae9;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  .feature-section p {
+    font-size: 1.2rem;
+    color: #045877;
+    margin-bottom: 30px;
+  }
+  
+  .image-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .image-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 350px;
+}
+.image-journey {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-journey img {
+    max-height: 500px;
+  }
+
+/*Flight Page*/
+
+.flight-search{
+  font-size: 1.2rem;
+    color: #0caae9;
+    margin-bottom: 30px;
+}
+
+.flight-listings{
+  font-size: 1.2rem;
+    color: #0caae9;
+    margin-bottom: 30px;
+}
+
+/* Add styles for the filters */
+.filters {
+  margin-bottom: 10px;
+}
+
+/* Add styles for the flight listings */
+.flight-listing {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+.footer {
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripMate - Flights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/TripMateHome.html" id="navbar__logo">
+        <img src="images/TripMateLogo.jpeg" alt="TripMate Logo" id="logo-image">
+        <span id="logo-text">TripMate</span>
+      </a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <!-- Menu Buttons -->
+      <ul class="navbar__menu">
+        <!-- Home -->
+        <li class="navbar__item">
+          <a href="/TripMateHome.html" class="navbar__links">Home</a>
+        </li>
+        <!-- Flights -->
+        <li class="navbar__item">
+          <a href="/TripMateFlights.html" class="navbar__links">Flights</a>
+        </li>
+        <!-- Hotels -->
+        <li class="navbar__item">
+          <a href="/hotels.html" class="navbar__links">Hotels</a>
+        </li>
+        <!-- Car Rentals -->
+        <li class="navbar__item">
+          <a href="/carrentals.html" class="navbar__links">Car Rentals</a>
+        </li>
+        <!-- Plan My Trip -->
+        <li class="navbar__btn">
+          <a href="/totaltripplanner.html" class="button">Plan My Trip</a>
+        </li>
+      </ul>
+      <!-- Signin Buttons -->
+      <ul class="sign_in"> 
+        <a href="/signup.html" class="signin">Sign Up</a>
+      </ul>
+      <ul class="sign_in">
+        <a href="/login.html" class="signin">Login</a>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="welcome-section">
+      <h1>Flights</h1>
+      <p> </p>
+    </section>
+
+    <section class="flight-listings">
+      <!-- Filter Inputs -->
+      <div class="filters">
+        <div class="search-bar">
+            <label for="departure-airport">Departure Airport:</label>
+            <input type="text" id="departure-airport" placeholder="Enter departure airport">
+          </div>
+          
+          <div class="search-bar">
+            <label for="arrival-airport">Arrival Airport:</label>
+            <input type="text" id="arrival-airport" placeholder="Enter arrival airport">
+          </div>
+          
+
+        <label for="departure-date">Departure Date:</label>
+        <input type="date" id="departure-date">
+
+        <label for="arrival-date">Arrival Date:</label>
+        <input type="date" id="arrival-date">
+
+        <label for="num-stops">Number of Stops:</label>
+        <select id="num-stops">
+          <option value="all">All</option>
+          <option value="non-stop">Non-stop</option>
+          <option value="1-stop">1 Stop</option>
+          <option value="2-stop">2 Stops</option>
+        </select>
+
+        <label for="sort-dropdown">Sort By:</label>
+        <select id="sort-dropdown">
+          <option value="price">Price</option>
+          <option value="quality">Quality</option>
+          <option value="flight-duration">Flight Duration</option>
+          <option value="num-stops">Number of Stops</option>
+          <!-- Add additional sorting criteria as needed -->
+        </select>
+
+        <button id="apply-filters">Apply Filters</button>
+      </div>
+
+      <!-- Flight Listings -->
+      <div id="flight-listings" class="flight-listings-container"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2023 TripMate. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
