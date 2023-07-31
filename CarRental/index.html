@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rentals - TripMate</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+          <a href="/TripMateHome.html" id="navbar__logo">
+            <img src="C:\Users\esatd\Desktop\CarRentalsAPI\Images\TripMateLogo.jpeg" alt="TripMate Logo" id="logo-image">
+            <span id="logo-text">TripMate</span>
+          </a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <!-- Menu Buttons -->
+          <ul class="navbar__menu">
+            <!-- Home -->
+            <li class="navbar__item">
+              <a href="/TripMateHome.html" class="navbar__links">Home</a>
+            </li>
+            <!-- Flights -->
+            <li class="navbar__item">
+              <a href="/TripMateFlights.html" class="navbar__links">Flights</a>
+            </li>
+            <!-- Hotels -->
+            <li class="navbar__item">
+              <a href="/hotels.html" class="navbar__links">Hotels</a>
+            </li>
+            <!-- Car Rentals -->
+            <li class="navbar__item">
+              <a href="/carrentals.html" class="navbar__links">Car Rentals</a>
+            </li>
+            <!-- Plan My Trip -->
+            <li class="navbar__btn">
+              <a href="/totaltripplanner.html" class="button">Plan My Trip</a>
+            </li>
+          </ul>
+          <!-- Signin Buttons -->
+          <ul class="sign_in"> 
+            <a href="/signup.html" class="signin">Sign Up</a>
+          </ul>
+          <ul class="sign_in">
+            <a href="/login.html" class="signin">Login</a>
+          </ul>
+        </div>
+      </nav>
+    
+      <div class="container">
+        <img src="C:\Users\esatd\Desktop\CarRentalsAPI\Images\Toyota.png" alt="Image Overlay" class="image-overlay"> <!-- Add the image here -->
+    </div>
+    <div class = Car-Font> <h1>Car Rentals</h1>
+    </div> 
+
+    </div>
+    <main class="flights-page">
+        <form onsubmit="searchAPI(event)" class="flights-page">
+            <input type="text" id="flights-page" placeholder="Search">
+            <button type="submit"><h1>Search Vehicle</h1></button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    <div id="flight-listings" class="flight-listings-container"></div>
+</section>
+
+<label for="sourceAirport">Where from:</label>
+<select id="sourceAirport" required></select>
+
+<label for="destinationAirport">Where to:</label>
+<select id="destinationAirport" required></select>
+
+<label for="itineraryType">Itinerary Type:</label>
+<select id="itineraryType" required></select>
+
+<label for="date">Departure Date:</label>
+<input type="date" id="date" placeholder="YYYY-MM-DD" required>
+
+<label for="returnDate">Return Date (Optional):</label>
+<input type="date" id="returnDate" placeholder="YYYY-MM-DD">
+
+<label for="numAdults">Number of Adults (13-64):</label>
+<input type="number" id="numAdults" placeholder="0" required>
+
+<label for="numSeniors">Number of Seniors (65+):</label>
+<input type="number" id="numSeniors" placeholder="0"required>
+
+<label for="childAges">Children Ages (2-12) (Optional):</label>
+<input type="text" id="childAges" placeholder="Ex: [2, 10]">
+
+<label for="classOfService">Class of Service:</label>
+<select id="classOfService" required></select>
+
+<label for="sortOrder">Sort By:</label>
+<select id="sortOrder" required></select>
+
+<button onclick="searchFlights()">Search Flights</button>
+
+</main>
+
+<footer class="footer">
+<p>&copy; 2023 TripMate. All rights reserved.</p>
+</footer>
+
+
+    <script>
+        function searchAPI(event) {
+            event.preventDefault();
+            const searchTerm = document.getElementById("flights-page").value;
+            fetch(`/search?query=${searchTerm}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => displayResults(data))
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Display an error message on the webpage or handle the error gracefully.
+                });
+        }
+
+        function displayResults(data) {
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // Clear previous results
+            if ("data" in data) {
+                const results = data["data"];
+                results.forEach(result => {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.innerHTML = `
+                        <p>Location: ${result.localizedName}</p>
+                        <p>Place Type: ${result.placeType}</p>
+                        <p>Latitude: ${result.latitude}</p>
+                        <p>Longitude: ${result.longitude}</p>
+                        <hr>
+                    `;
+                    resultsDiv.appendChild(itemDiv);
+                });
+            } else {
+                resultsDiv.innerHTML = "<p>No results found.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

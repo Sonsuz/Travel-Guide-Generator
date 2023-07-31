@@ -1,0 +1,353 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*Navigation Bar*/
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: #131313;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+#logo-image {
+  background-color: #131313;
+  width: 100px;
+  height: 80px;
+}
+#logo-text {
+  margin-left: 10px; 
+  font-size: 2rem; 
+  color: #0caae9; 
+  background-color: #131313;
+  font-family: 'Kumbh Sans', sans-serif; /*Esat changed font since I think this looks better tbh*/ 
+}
+
+.fa-gem {
+    margin-right: 0.5 rem;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.signin {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-right: 1px;
+    padding: 0 0.5rem;
+    height: 100%;
+}
+.signin:hover {
+  color: #0caae9;
+  transition: all 0.3s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: #0caae9;
+    color: #fff
+}
+.button:hover {
+    background: #ffffff;
+    color: #0caae9; 
+}
+
+.button1 {
+    font-size: 25px;
+    padding: 10px 100px;
+    height: 100%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: #0caae9;
+    color: #fff
+}
+.button1:hover {
+    background: #ffffff;
+    color: #0caae9; 
+}
+
+.navbar__links:hover {
+    color: #0caae9;
+    transition: all 0.3s ease;
+}
+
+/*Home Page*/
+
+.welcome-section {
+    text-align: center;
+    padding: 50px 0;
+    color: #045877;
+    background-color: #f1f1f1;
+  }
+  
+  .feature-section {
+    padding: 50px 0;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .feature-section h2 {
+    color: #0caae9;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .feature-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #045877;
+    margin: 12px auto;
+  }
+
+  .feature-section h3 {
+    color: #0caae9;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  .feature-section p {
+    font-size: 1.2rem;
+    color: #045877;
+    margin-bottom: 30px;
+  }
+  
+  .image-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .image-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 350px;
+}
+.image-journey {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-journey img {
+    max-height: 500px;
+  }
+
+/*Flight Page*/
+
+button h1 {
+    font-size: 20px; /* Adjust the font size as per your preference */
+  }
+
+.flight-search{
+  font-size: 1.2rem;
+    color: #0caae9;
+    margin-bottom: 30px;
+}
+
+.flight-listings{
+  font-size: 1.2rem;
+    color: #0caae9;
+    margin-bottom: 30px;
+}
+
+/* Add styles for the filters */
+.filters {
+  margin-bottom: 10px;
+}
+
+/* Add styles for the flight listings */
+.flight-listing {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+/* Flight search form */
+main.flights-page {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main label {
+  font-weight: bold;
+  color: #045877;
+  margin-bottom: 5px;
+  display: block;
+}
+
+main select,
+main input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+main input[type="date"] {
+  appearance: none;
+}
+
+main input[type="date"]:invalid {
+  color: #999;
+}
+
+.hint {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+main button {
+  font-size: 25px;
+  padding: 10px 100px;
+  margin-top: 20px;
+  width: 100%;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: #0caae9;
+  color: #fff;
+  cursor: pointer;
+}
+
+main button:hover {
+  background: #ffffff;
+  color: #0caae9;
+}
+
+/*This is for the Car page front picture*/
+/* CSS for the Search Bar container */
+.container {
+    position: relative;
+    width: 100%; /* Set the width to 100% to fit the screen */
+    padding-top: 28.125%; /* This will maintain a 16:9 aspect ratio for the container */
+  }
+  
+  /* CSS for the overlay image */
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover; /* This will make the image fit the container while maintaining its aspect ratio */
+  }
+
+  .Car-Font {
+    position: absolute;
+  top: 50%; /* Adjust the vertical position of the text (you can change this value as needed) */
+  left: 10%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  color: #ffffff;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 1; /* Set the z-index to 1 to display the text above the image */
+}
+  
