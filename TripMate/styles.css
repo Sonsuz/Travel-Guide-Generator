@@ -247,16 +247,69 @@
   margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
 .footer {
     text-align: center;
     left: 0;
     bottom: 0;
     width: 100%;
   }
+
+/* Flight search form */
+main.flights-page {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main label {
+  font-weight: bold;
+  color: #045877;
+  margin-bottom: 5px;
+  display: block;
+}
+
+main select,
+main input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+main input[type="date"] {
+  appearance: none;
+}
+
+main input[type="date"]:invalid {
+  color: #999;
+}
+
+.hint {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+main button {
+  font-size: 25px;
+  padding: 10px 100px;
+  margin-top: 20px;
+  width: 100%;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: #0caae9;
+  color: #fff;
+  cursor: pointer;
+}
+
+main button:hover {
+  background: #ffffff;
+  color: #0caae9;
+}
