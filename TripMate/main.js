@@ -21,6 +21,8 @@ try {
 } catch (error) {
   console.error(error.message);
 }
+//Function for 'Search Flights' button: API request is made once 'Search Flights' button is clicked
+async function buttonFlight(){
 
 const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode=${sourceAirportCode}&destinationAirportCode=${destinationAirportCode}&date=${date}&itineraryType=${itineraryType}&sortOrder=${sortOrder}&numAdults=1&numSeniors=0&classOfService=${classOfService}&pageNumber=1&currencyCode=USD';
 const options = {
@@ -38,3 +40,7 @@ try {
 } catch (error) {
 	console.error(error);
 }
+}
+
+//When the button is clicked, the event listener will call the buttonFlight() function.
+document.getElementById("flightButton").addEventListener("click", buttonFlight);
