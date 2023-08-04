@@ -155,14 +155,26 @@
     justify-content: center;
     text-align: center;
   }
-  
-  .feature-section h2 {
+
+  .button3 {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: #0caae9;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none; /* Remove underline from the link */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer; /* Change cursor on hover */
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .button3:hover {
+    color: #045877;
   }
 
-  .feature-section h2::after {
+  .button3::after {
     content: "";
     display: block;
     width: 80px;
